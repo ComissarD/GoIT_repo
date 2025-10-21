@@ -32,4 +32,7 @@ def find_next_weekday(start_date, weekday):
 def get_upcoming_birthdays(users, days=7):
     upcoming_birthdays = []
     today = date.today()
-
+    for user in users:
+        user["birthday"] = user["birthday"].replace(year=today.year)
+    
+    
